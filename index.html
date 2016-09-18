@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="angularBooks">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +22,15 @@
   </head>
   <body>
 <h1> Angular Test should have a 4 right here -->  {{2*2}} </h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col md-6 col-mg-offset-3">
+          <div ng-view></div>
+        </div>
+      </div>
+    </div>
+
 
   </body>
 </html>
