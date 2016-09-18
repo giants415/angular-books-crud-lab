@@ -1,15 +1,16 @@
 console.log('app.js is connected');
 
-angular
-  .module('angularBooks', ['ngRoute'])
-  .config(config);
+angular.module('angularBooks', ['ngRoute'])
+       .config(config);
 
 
-congif.$inject = ['$routeProvider', '$locationProvider'];
+config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: '/templates/books/index.html'
+    templateUrl: '../views/templates/books.html',
+    controller: 'BooksIndexController',
+    controllerAs: 'BooksIndexCtrl'
   })
   .otherwise ({
     redirectTo: '/'

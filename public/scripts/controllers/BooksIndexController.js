@@ -10,9 +10,9 @@ BooksIndexController.$inject = ['$http'];
     method: 'GET',
     url: 'https://super-crud.herokuapp.com/books'
     }).then(function successCb(response) {
-      console.log('get all books data worked');
+      console.log('get all books data worked', response.data);
       vm.books = response.data.books;
     }, function errorCb(error){
-      console.log('Error getting all books data: ' + error);
+      console.log('Error getting all books data: ', error);
   });
 };
