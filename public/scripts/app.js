@@ -12,6 +12,11 @@ function config ($routeProvider, $locationProvider) {
     controller: 'BooksIndexController',
     controllerAs: 'BooksIndexCtrl'
   })
+  .when('/books/:id', {
+    templateUrl: '../views/templates/showBooks.html',
+    controller: 'ShowBooksController',
+    controllerAs: 'ShowBooksCtrl'
+  })
   .otherwise ({
     redirectTo: '/'
   });
